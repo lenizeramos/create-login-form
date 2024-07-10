@@ -35,7 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  login.addEventListener("click", () => {
+  // login button
+  login.addEventListener("click", (event) => {
+    event.preventDefault();
     if (email.value != "" && password.value != "") {
       console.log(
         `E-mail: ${email.value}, Password: ${password.value}, Remind me: ${remindMe.checked}.`

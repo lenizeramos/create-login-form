@@ -1,0 +1,217 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$textBase: #afb6c2;
+$textTitle: #d4ccb6;
+$background: #191816;
+$formBackground: #24221f;
+$primaryColor: #ffc632;
+
+$primaryFont: "Poppins", sans-serif;
+$secundaryFont: "Roboto", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: $background;
+  color: $textBase;
+  font-family: $primaryFont;
+  font-size: 1em;
+}
+
+.layout {
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+  }
+  .left {
+    width: 100%;
+    height: 100%;
+
+    .logo {
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .main {
+      width: 90%;
+      height: 100%;
+      margin: 0 auto;
+      padding: 20px;
+
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        background-color: $formBackground;
+        margin-top: 100px;
+        padding: 40px;
+      }
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        background-color: $formBackground;
+        margin-top: 100px;
+        padding: 60px;
+      }
+      @media only screen and (min-width: 1200px) {
+        background-color: $formBackground;
+        width: 70%;
+        margin-top: 100px;
+        padding: 70px;
+      }
+      .log-in {
+        margin-bottom: 15px;
+      }
+
+      .title {
+        font-family: $primaryFont;
+        color: $textTitle;
+        font-size: 1.8em;
+        font-weight: 600;
+      }
+
+      .info-below {
+        color: $textBase;
+        font-family: $primaryFont;
+      }
+
+      #form {
+        input {
+          outline: none;
+          &:focus {
+            border: 1px solid $primaryColor !important;
+          }
+
+          &::placeholder {
+            padding: 0;
+            color: $textBase;
+          }
+        }
+
+        #email,
+        #password {
+          background-color: $formBackground;
+          color: $textBase;
+          width: 100%;
+          height: fit-content;
+          border: 1px rgb(80, 69, 69) solid;
+          border-radius: 5px;
+          margin: 0 0 15px 0;
+          padding: 10px 40px;
+          caret-color: transparent;
+        }
+        .email-icon {
+          position: relative;
+          margin-top: 10px;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 0;
+            transform: translateY(-15%);
+            bottom: 0;
+            width: 20px;
+            background-image: url(../images/mail.svg);
+            background-repeat: no-repeat;
+            background-position: left;
+            pointer-events: none;
+          }
+          &.focus::before {
+            background-image: url(../images/mail-focus.svg);
+          }
+        }
+
+        .password-icon {
+          position: relative;
+          margin-top: 10px;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 0;
+            transform: translateY(-15%);
+            bottom: 0;
+            width: 20px;
+            background-image: url(../images/lock.svg);
+            background-repeat: no-repeat;
+            background-position: left;
+            pointer-events: none;
+          }
+          &.focus::before {
+            background-image: url(../images/lock-focus.svg);
+          }
+          .eye-icon {
+            content: "";
+            position: absolute;
+            right: 10px;
+            top: 0;
+            transform: translateY(-15%);
+            bottom: 0;
+            width: 20px;
+            background-image: url(../images/eye-closed.svg);
+            background-repeat: no-repeat;
+            background-position: left;
+            cursor: pointer;
+            &.open {
+              background-image: url(../images/eye.svg);
+            }
+          }
+        }
+
+        .remindMe-forgotPassword {
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: space-between;
+          #checkbox {
+            margin-right: 5px;
+
+            &:checked {
+              accent-color: $primaryColor;
+            }
+          }
+        }
+        a {
+          text-decoration: none;
+          color: $primaryColor;
+          margin-left: 20px;
+          font-size: 1em;
+          font-weight: 600;
+        }
+        #login {
+          width: 100%;
+          background-color: $primaryColor;
+          color: black;
+          font-weight: 700;
+          font-size: 1em;
+          padding: 10px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+        }
+        .paragraph {
+          white-space: nowrap;
+          text-align: center;
+          font-size: $secundaryFont;
+          color: $primaryColor;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .right {
+      width: 100%;
+      height: 100%;
+      background-image: url(../images/side-image-2x.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

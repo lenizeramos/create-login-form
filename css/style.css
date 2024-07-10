@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #191816;
+  color: #afb6c2;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+  }
+}
+.layout .left {
+  width: 100%;
+  height: 100%;
+}
+.layout .left .logo {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.layout .left .main {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .layout .left .main {
+    background-color: #24221f;
+    margin-top: 100px;
+    padding: 40px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .layout .left .main {
+    background-color: #24221f;
+    margin-top: 100px;
+    padding: 60px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .layout .left .main {
+    background-color: #24221f;
+    width: 70%;
+    margin-top: 100px;
+    padding: 70px;
+  }
+}
+.layout .left .main .log-in {
+  margin-bottom: 15px;
+}
+.layout .left .main .title {
+  font-family: "Poppins", sans-serif;
+  color: #d4ccb6;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+.layout .left .main .info-below {
+  color: #afb6c2;
+  font-family: "Poppins", sans-serif;
+}
+.layout .left .main #form input {
+  outline: none;
+}
+.layout .left .main #form input:focus {
+  border: 1px solid #ffc632 !important;
+}
+.layout .left .main #form input::-moz-placeholder {
+  padding: 0;
+  color: #afb6c2;
+}
+.layout .left .main #form input::placeholder {
+  padding: 0;
+  color: #afb6c2;
+}
+.layout .left .main #form #email,
+.layout .left .main #form #password {
+  background-color: #24221f;
+  color: #afb6c2;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 1px rgb(80, 69, 69) solid;
+  border-radius: 5px;
+  margin: 0 0 15px 0;
+  padding: 10px 40px;
+  caret-color: transparent;
+}
+.layout .left .main #form .email-icon {
+  position: relative;
+  margin-top: 10px;
+}
+.layout .left .main #form .email-icon::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  transform: translateY(-15%);
+  bottom: 0;
+  width: 20px;
+  background-image: url(../images/mail.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  pointer-events: none;
+}
+.layout .left .main #form .email-icon.focus::before {
+  background-image: url(../images/mail-focus.svg);
+}
+.layout .left .main #form .password-icon {
+  position: relative;
+  margin-top: 10px;
+}
+.layout .left .main #form .password-icon::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  transform: translateY(-15%);
+  bottom: 0;
+  width: 20px;
+  background-image: url(../images/lock.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  pointer-events: none;
+}
+.layout .left .main #form .password-icon.focus::before {
+  background-image: url(../images/lock-focus.svg);
+}
+.layout .left .main #form .password-icon .eye-icon {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 0;
+  transform: translateY(-15%);
+  bottom: 0;
+  width: 20px;
+  background-image: url(../images/eye-closed.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  cursor: pointer;
+}
+.layout .left .main #form .password-icon .eye-icon.open {
+  background-image: url(../images/eye.svg);
+}
+.layout .left .main #form .remindMe-forgotPassword {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.layout .left .main #form .remindMe-forgotPassword #checkbox {
+  margin-right: 5px;
+}
+.layout .left .main #form .remindMe-forgotPassword #checkbox:checked {
+  accent-color: #ffc632;
+}
+.layout .left .main #form a {
+  text-decoration: none;
+  color: #ffc632;
+  margin-left: 20px;
+  font-size: 1em;
+  font-weight: 600;
+}
+.layout .left .main #form #login {
+  width: 100%;
+  background-color: #ffc632;
+  color: black;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.layout .left .main #form .paragraph {
+  white-space: nowrap;
+  text-align: center;
+  font-size: "Roboto", sans-serif;
+  color: #ffc632;
+  font-weight: 400;
+}
+@media only screen and (min-width: 768px) {
+  .layout .right {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/side-image-2x.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}/*# sourceMappingURL=style.css.map */

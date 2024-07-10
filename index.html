@@ -4,8 +4,67 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <title>Login-Form</title>
   </head>
-  <body></body>
+  <body>
+    <div class="layout">
+      <div class="left">
+        <header class="logo">
+          <img src="images/logo.svg" alt="logo" />
+        </header>
+        <main>
+          <div class="main">
+            <div class="log-in">
+              <h1 class="title">
+                <img src="images/log-in.svg" alt="log-in" /> Login
+              </h1>
+              <p class="info-below">Insert your information below.</p>
+            </div>
+            <form action="" id="form">
+              <label for="email">E-mail</label>
+              <div class="email-icon" id="email-icon">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Type your email"
+                  required
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                  autocomplete="off"
+                />
+              </div>
+              <label for="password">Password</label>
+              <div class="password-icon" id="password-icon">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Type your password"
+                  required
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  autocomplete="off"
+                />
+                <div class="eye-icon" id="eye-icon"></div>
+              </div>
+              <div class="remindMe-forgotPassword">
+                <div>
+                  <input type="checkbox" name="checkbox" id="checkbox" />
+                  <label for="checkbox">Remind me</label>
+                </div>
+                <p class="paragraph"><a href="#">Forgot my password</a></p>
+              </div>
+              <button type="submit" id="login">LOGIN</button>
+              <p class="paragraph">
+                Don't have an account?<a href="#">Sign up!</a>
+              </p>
+            </form>
+          </div>
+        </main>
+      </div>
+      <div class="right"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
